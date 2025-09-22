@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+    background: linear-gradient(70deg, blue, purple, pink);
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+/* Reglas para pantallas de hasta 768px de ancho (móviles y tablets pequeñas) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+.Con-2 {
+    display: none;
+}
+
+canvas {
+    display: block;
+    width: 100%; /* El canvas ocupará el 100% del ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente */
+    max-width: 800px; /* Limita el ancho máximo para pantallas grandes */
+}
+
+.Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambié 'height' por 'min-height' para evitar recortes */
+    margin: 0;
+    flex-direction: column; /* Apila el canvas y el texto verticalmente en móviles */
+}
+/* Agrega un poco de margen inferior en dispositivos móviles */
+@media (max-width: 768px) {
+    .Contenedor {
+        padding-bottom: 20px;
+    }
+}
+.Con {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Permite que los botones salten de línea si no caben */
+}
+
+.Texto {
+    display: none;
+}
+
+.Texto h2 {
+    font-size: 50px;
+    text-align: center; /* Centra el texto */
+    padding: 0 10px; /* Agrega un poco de espacio a los lados */
+}
+
+@media (max-width: 768px) {
+    .Texto h2 {
+        font-size: 20px;
+    }
+}
+
+#B12 {
+    margin-left: 30px;
+}
+@media (max-width: 468px) {
+    .Con {
+        flex-direction: column; /* Apila los botones verticalmente */
+    }
+
+    #B12 {
+        margin-left: 0;
+        margin-top: 15px; /* Agrega espacio entre los botones */
+    }
+}
+.Button{
+    font-family: monospace;
+    font-size: x-large;
+    transition-duration: 0.2s;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: greenyellow; 
+    color: black; 
+    border: 2px solid green;
+    cursor: pointer;
+}
+  
+.Button:hover{
+    transform: scale(1.1);
+    border-radius: 14px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: black;
+    background-color: white;
+}
+
+.Contenedor-Binicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Con-Emergente{
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+}
+
+.cua{
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+}
+
+@media (max-width: 468px) {
+    body {
+        background: linear-gradient(100deg, blue, purple, pink);
+
+    }
+}
